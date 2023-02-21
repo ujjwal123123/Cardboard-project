@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class AddBuildings : MonoBehaviour
@@ -7,9 +8,16 @@ public class AddBuildings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int x = -50; x < 50; x += 20)
+        string[] companies = { "NVIDIA", "ARM", "Samsung", "Intel" };
+
+        // iterate over each company and create a building
+        int x = 0;
+        foreach (string company in companies)
         {
-            Instantiate(buildingPrefab, new Vector3(x, 0, -4), Quaternion.identity);
+            GameObject building = Instantiate(buildingPrefab, new Vector3((float)(146.3 + x), (float)21.5, (float)112.3), Quaternion.identity);
+            TMP_Text nameholder = building.GetComponentInChildren<TMP_Text>();
+            nameholder.text = company;
+            x += 20;
         }
     }
 
