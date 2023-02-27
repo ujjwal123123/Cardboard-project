@@ -2166,7 +2166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af6a083d962bfc5910de1a79d58876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1788683868956837076, guid: a4774367ef6ef535e8810bf8c3132a68, type: 3}
+  buildingPrefab1: {fileID: 1164899596817984, guid: ba33f5f0a254c9443956b40146028648, type: 3}
+  buildingPrefab2: {fileID: 1503822532645738, guid: c8c7944afbb63f548bf2b2bddd8a848f, type: 3}
+  buildingPrefab3: {fileID: 1899946360806954, guid: 7d569c6acdec3c2428d7b39889d89720, type: 3}
+  buildingPrefab4: {fileID: 1785044199738478, guid: a6cd0c657da915144bd367d385c0fc31, type: 3}
 --- !u!4 &1901819146
 Transform:
   m_ObjectHideFlags: 0
