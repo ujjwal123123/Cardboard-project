@@ -8,6 +8,8 @@ public class AddBuildings : MonoBehaviour
     public GameObject buildingPrefab3; // Prefab to use for buildings
     public GameObject buildingPrefab4; // Prefab to use for buildings
 
+    public GameObject logoPrefab;
+
     int saneMod(int x, int m)
     {
         // https://stackoverflow.com/a/51018529/11659427
@@ -27,8 +29,8 @@ public class AddBuildings : MonoBehaviour
         {
             int buildingIndex = saneMod(company.GetHashCode(), buildings.Length);
             GameObject building = Instantiate(buildings[buildingIndex], new Vector3((float)(80 + x), 0, 140), Quaternion.identity);
-            // TMP_Text nameholder = building.GetComponentInChildren<TMP_Text>();
-            // nameholder.text = company;
+            GameObject logo = Instantiate(logoPrefab, new Vector3((float)(80 + x), 5, 120), Quaternion.identity);
+
             x += 40;
         }
     }
