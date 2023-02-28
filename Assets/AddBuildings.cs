@@ -1,5 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
+// public class Company
+// {
+//     public string name;
+//     public string logo;
+// }
 
 public class AddBuildings : MonoBehaviour
 {
@@ -7,7 +14,6 @@ public class AddBuildings : MonoBehaviour
     public GameObject buildingPrefab2; // Prefab to use for buildings
     public GameObject buildingPrefab3; // Prefab to use for buildings
     public GameObject buildingPrefab4; // Prefab to use for buildings
-
     public GameObject logoPrefab;
 
     int saneMod(int x, int m)
@@ -28,8 +34,14 @@ public class AddBuildings : MonoBehaviour
         foreach (string company in companies)
         {
             int buildingIndex = saneMod(company.GetHashCode(), buildings.Length);
-            GameObject building = Instantiate(buildings[buildingIndex], new Vector3((float)(80 + x), 0, 140), Quaternion.identity);
-            GameObject logo = Instantiate(logoPrefab, new Vector3((float)(80 + x), 5, 120), Quaternion.identity);
+            Instantiate(buildings[buildingIndex], new Vector3((float)(80 + x), 0, 140), Quaternion.identity);
+            GameObject logo = Instantiate(logoPrefab, new Vector3((float)(85 + x), 5, 120), Quaternion.identity);
+            Debug.Log(Resources.Load<Sprite>("intel/intel_logo"));
+            // logo.GetComponentInChildren<Image>().sprite =
+            // Resources.Load<Sprite>("Assets/Logos/intel_logo.png");
+            
+            // Change image of logo
+            logo.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>("intel/intel_logo");
 
             x += 40;
         }
