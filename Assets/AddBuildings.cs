@@ -26,7 +26,7 @@ public class AddBuildings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string[] companies = { "NVIDIA", "ARM", "Samsung", "Intel" };
+        string[] companies = { "NVIDIA", "AMD", "Intel" };
         GameObject[] buildings = { buildingPrefab1, buildingPrefab2, buildingPrefab3, buildingPrefab4 };
 
         // iterate over each company and create a building
@@ -35,13 +35,9 @@ public class AddBuildings : MonoBehaviour
         {
             int buildingIndex = saneMod(company.GetHashCode(), buildings.Length);
             Instantiate(buildings[buildingIndex], new Vector3((float)(80 + x), 0, 140), Quaternion.identity);
-            GameObject logo = Instantiate(logoPrefab, new Vector3((float)(85 + x), 5, 120), Quaternion.identity);
-            Debug.Log(Resources.Load<Sprite>("intel/intel_logo"));
-            // logo.GetComponentInChildren<Image>().sprite =
-            // Resources.Load<Sprite>("Assets/Logos/intel_logo.png");
-            
+            GameObject logo = Instantiate(logoPrefab, new Vector3((float)(85 + x), 8, 120), Quaternion.identity);
             // Change image of logo
-            logo.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>("intel/intel_logo");
+            logo.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>(company.ToLower() + "/" + company.ToLower() + "_logo");
 
             x += 40;
         }
