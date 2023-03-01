@@ -2,11 +2,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// public class Company
-// {
-//     public string name;
-//     public string logo;
-// }
+public class Company
+{
+    public string name;
+    public string logo_URL;
+    public string company_id;
+    public string building_color;
+    public string building_type;
+}
 
 public class AddBuildings : MonoBehaviour
 {

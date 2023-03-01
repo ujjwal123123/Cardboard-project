@@ -1,0 +1,17 @@
+[
+    {
+        "name": "AMD",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/320px-AMD_Logo.svg.png",
+        "company_id": 1
+    },
+    {
+        "name": "Intel",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Intel_logo_%282020%2C_light_blue%29.svg/320px-Intel_logo_%282020%2C_light_blue%29.svg.png",
+        "company_id": 2
+    },
+    {
+        "name": "NVIDIA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/sco/thumb/2/21/Nvidia_logo.svg/320px-Nvidia_logo.svg.png",
+        "company_id": 3
+    }
+]
